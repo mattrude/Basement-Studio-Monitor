@@ -2,7 +2,7 @@
  * Basement Studio Monior - Version 0.2.0 - Matt Rude <matt@mattrude.com>
  * 
  * This program reads the temperature & humidity from a DHT11 sensor and send
- * the data via MQTT to a centeral server.
+ * the data via MQTT to a central server.
  * 
  * ****************************************************************************
  * 
