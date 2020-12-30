@@ -40,7 +40,7 @@
 #include <stdlib.h>             // Include the C standard library
 #include <avr/dtostrf.h>        // Include dtostrf floating points
 #include <WDTZero.h>            // Include the Watch Dog Timer
-#include "arduino_secrets.h"    // Include Serets File
+#include "configuration.h"    // Include Serets File
 
 // Enable the WatchDog Process
 WDTZero MyWatchDoggy;           // Load MyWatchDoggy as the WDTZero pointer
