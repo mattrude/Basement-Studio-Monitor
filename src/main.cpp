@@ -59,8 +59,8 @@ int intervalTime = 2;           // Interval in minutes between time updates.
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
 
-const char broker[]         = MQTT_SERVER;
 int        port             = 1883;
+const char broker[]         = MQTT_SERVER;
 const char mqttPath[]       = MQTT_PATH;
 const char * mqttPathF      = "home/basement/studio/temperature";
 const char * mqttPathH      = "home/basement/studio/humidity";
