@@ -38,8 +38,8 @@
 #include <Adafruit_Sensor.h>    // Adafruit Common sensor library for DHT sensor
 #include <DHT.h>                // Include temperature and humidity sensor support
 #include <stdlib.h>             // Include the C standard library
-#include <avr/dtostrf.h>        // Include dtostrf floating points
 #include <WDTZero.h>            // Include the Watch Dog Timer
+#include <stdio.h>              // Include for dtostrf floating points converstions
 #include "configuration.h"      // Include Serets File
 
 // Enable the WatchDog Process
@@ -93,6 +93,15 @@ void reconnectWiFi() {
         status = WiFi.begin(ssid, pass);
         delay(10000);
     }
+}
+
+char *dtostrf (double val, signed char width, unsigned char prec, char *sout) {
+  asm(".global _printf_float");
+
+  char fmt[20];
+  sprintf(fmt, "%%%d.%df", width, prec);
+  sprintf(sout, fmt, val);
+  return sout;
 }
 
 int main(void) {
