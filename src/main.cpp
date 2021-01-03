@@ -120,7 +120,7 @@ int main(void) {
     client.connect(MQTT_CLIENT_ID, MQTT_USERNAME, MQTT_PASSWORD,
         "home/control/basement/studio/boot", 1, 1, "Offline");
     
-    delay(250);
+    delay(250);             // Wait 0.25 seconds
     client.publish("home/control/basement/studio/boot", "Online");
     Serial.println("You're connected to the MQTT broker!");
     Serial.println();
